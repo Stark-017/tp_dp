@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Devhuti! 💜 | BTS Special Celebration</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Canvas for Confetti & Particle Effects -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Floating Purple Hearts Background -->
+    <div id="heart-container"></div>
+
+    <!-- Music / Sound Control Pill -->
+    <div class="music-pill" id="music-pill">
+        <button id="music-toggle-btn" class="glow-button pill-btn" title="Toggle Birthday Melody">
+            <span class="music-icon" id="music-icon">🎵</span>
+            <span class="music-label" id="music-label">Play BTS Birthday Melody</span>
+            <div class="equalizer-bars" id="eq-bars">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </button>
+    </div>
+
+    <!-- ARMY Lightstick Floating Action Button -->
+    <button class="army-bomb-fab" id="army-bomb-btn" title="Light up ARMY Bomb!">
+        <div class="bomb-globe">
+            <span class="bomb-light"></span>
+            <span class="bomb-fuse">🔴</span>
+        </div>
+        <span class="bomb-tooltip">Wave ARMY Bomb! 💜</span>
+    </button>
+
+    <!-- HERO / WELCOME SECTION -->
+    <header class="hero-section">
+        <div class="galaxy-glow"></div>
+        <div class="hero-content">
+            <div class="badge-pill">
+                <span class="korean-text">방탄소년단과 함께하는 특별한 날</span>
+                <span class="dot">•</span>
+                <span>BTS Special ARMY Edition</span>
+            </div>
+            <h1 class="hero-title">
+                Happy Birthday <br>
+                <span class="highlight-name glow-text">Devhuti!</span>
+            </h1>
+            <p class="hero-subtext">
+                Seven legends, infinite purple love, and a universe of music just for you today!
+                <br>Scroll down to reveal personalized birthday wishes from every BTS member! 💜✨
+            </p>
+
+            <div class="hero-quote-card">
+                <p class="quote-text">"Purple is the last color of the rainbow colors. It means I will trust and love you for a long time."</p>
+                <span class="quote-author">— BTS (Borahae / 보라해 💜)</span>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll down to meet the members</span>
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN SCROLLING MEMBERS CONTAINER (2 MEMBERS PER VIEW/SCROLL) -->
+    <main class="members-container">
+
+        <!-- PAIR 1: RM (Kim Namjoon) & Jin (Kim Seokjin) -->
+        <section class="member-pair-section" id="pair-1">
+            <div class="pair-header">
+                <span class="pair-tag">BTS Chapter 1 • The Hyung & Leader Line</span>
+                <h2>Wisdom & Worldwide Handsome Wishes</h2>
+            </div>
+            <div class="dual-grid">
+                <!-- Member Card: RM -->
+                <div class="member-card left-card" data-member="RM">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Kim_Nam-joon_at_the_White_House%2C_31_May_2022.jpg/800px-Kim_Nam-joon_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-rm" 
+                                 alt="Kim Namjoon (RM)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐨 RM (Leader)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">김남준 • Kim Namjoon</div>
+                            <h3 class="member-name">Kim Namjoon (RM)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Dear Devhuti, life is a beautiful sculpture that you shape with every dream and lesson. May this new year bring you immense inner peace, deep wisdom, great art, and boundless joy. Always love yourself and keep walking forward proudly!"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">With all our purple love,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Kim Namjoon (RM) 🐨💜</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card: Jin -->
+                <div class="member-card right-card" data-member="Jin">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Kim_Seok-jin_at_the_White_House%2C_31_May_2022.jpg/800px-Kim_Seok-jin_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-jin" 
+                                 alt="Kim Seokjin (Jin)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐹 Jin (Worldwide Handsome)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">김석진 • Kim Seokjin</div>
+                            <h3 class="member-name">Kim Seokjin (Jin)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Devhuti-ya!! It's your special day! Remember, your very presence is a dazzling present to this entire world (just like Worldwide Handsome Jin!). Eat lots of delicious cake, laugh out loud until your tummy hurts, and shine bright like the star you are! *flying kiss* 💋✨"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">Shining bright for you,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Kim Seokjin (Jin) 🐹✨</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAIR 2: Suga (Min Yoongi) & J-Hope (Jung Hoseok) -->
+        <section class="member-pair-section" id="pair-2">
+            <div class="pair-header">
+                <span class="pair-tag">BTS Chapter 2 • The SOPE Synergy Line</span>
+                <h2>Genius Beats & Radiant Sunshine Hope</h2>
+            </div>
+            <div class="dual-grid">
+                <!-- Member Card: Suga -->
+                <div class="member-card left-card" data-member="Suga">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Min_Yoon-gi_at_the_White_House%2C_31_May_2022.jpg/800px-Min_Yoon-gi_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-suga" 
+                                 alt="Min Yoongi (Suga)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐱 Suga (Agust D)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">민윤기 • Min Yoongi</div>
+                            <h3 class="member-name">Min Yoongi (Suga)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Devhuti, don't worry too much about the noise around you. Walk your path at your own tempo, stay passionate about the things you love, and let music heal you whenever you feel tired. You are doing great, always. Happy birthday."
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">Keep rocking forward,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Min Yoongi (Suga) 🐱🎹</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card: J-Hope -->
+                <div class="member-card right-card" data-member="J-Hope">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Jung_Ho-seok_at_the_White_House%2C_31_May_2022.jpg/800px-Jung_Ho-seok_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-jhope" 
+                                 alt="Jung Hoseok (J-Hope)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐿️ J-Hope (Sunshine)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">정호석 • Jung Hoseok</div>
+                            <h3 class="member-name">Jung Hoseok (J-Hope)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "I'm your hope, you're my hope, Devhuti!! 🎉 Happy happy birthday to our brightest ARMY! May your year burst with electrifying dance beats, endless sunshine, pure laughter, and sparkling dreams! J-HOOOOPE is giving you all the positive energy today! 🌈"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">Full of joy and sunshine,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Jung Hoseok (J-Hope) 🐿️🌈</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAIR 3: Jimin (Park Jimin) & V (Kim Taehyung) -->
+        <section class="member-pair-section" id="pair-3">
+            <div class="pair-header">
+                <span class="pair-tag">BTS Chapter 3 • The 95z Soulmates</span>
+                <h2>Sweet Angelic Love & Borahae Magic</h2>
+            </div>
+            <div class="dual-grid">
+                <!-- Member Card: Jimin -->
+                <div class="member-card left-card" data-member="Jimin">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Park_Ji-min_at_the_White_House%2C_31_May_2022.jpg/800px-Park_Ji-min_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-jimin" 
+                                 alt="Park Jimin (Jimin)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐥 Jimin (Sweet Angel)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">박지민 • Park Jimin</div>
+                            <h3 class="member-name">Park Jimin (Jimin)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Dearest Devhuti! 🌸 Never forget how truly precious and lovely you are. Whenever you smile, the world turns a little bit more magical. I hope your birthday is filled with warm hugs, sweet moments, and memories you will treasure forever! Borahae!"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">Always cheering for you,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Park Jimin (Jimin) 🐥🌸</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card: V -->
+                <div class="member-card right-card" data-member="V">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Kim_Tae-hyung_at_the_White_House%2C_31_May_2022.jpg/800px-Kim_Tae-hyung_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-v" 
+                                 alt="Kim Taehyung (V)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐻 V (Winter Bear)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">김태형 • Kim Taehyung</div>
+                            <h3 class="member-name">Kim Taehyung (V)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Devhuti, like purple is the final color that holds the rainbow together, I wish you endless love, unique adventures, and wonderful jazz moments throughout your life. Trust yourself and be proud of who you are. I purple you so much! 💜"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">I Purple You forever,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Kim Taehyung (V) 🐻💜</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAIR 4: Jungkook (Jeon Jungkook) & BTS OT7 Group -->
+        <section class="member-pair-section" id="pair-4">
+            <div class="pair-header">
+                <span class="pair-tag">BTS Chapter 4 • The Golden Maknae & OT7 Symphony</span>
+                <h2>Golden Passion & Forever Bangtan</h2>
+            </div>
+            <div class="dual-grid">
+                <!-- Member Card: Jungkook -->
+                <div class="member-card left-card" data-member="Jungkook">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Jeon_Jung-kook_at_the_White_House%2C_31_May_2022.jpg/800px-Jeon_Jung-kook_at_the_White_House%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-jk" 
+                                 alt="Jeon Jungkook (Jungkook)"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">🐰 Jungkook (Golden Maknae)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">전정국 • Jeon Jungkook</div>
+                            <h3 class="member-name">Jeon Jungkook (Jungkook)</h3>
+                            <div class="wish-speech-bubble">
+                                <p class="wish-message">
+                                    "Hey Devhuti! 🎸 Happy Birthday! Whatever passion or goal you have in your heart, chase it boldly without regrets! Keep singing your own melody, work hard, play harder, and stay healthy! Let's rock this year together! 💜"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">Stay golden always,</span>
+                                <div class="signature-box">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Jeon Jungkook (Jungkook) 🐰💜</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card: BTS OT7 (All 7 Members) -->
+                <div class="member-card right-card ot7-card" data-member="BTS">
+                    <div class="card-inner">
+                        <div class="photo-wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/BTS_at_the_White_House_press_briefing%2C_31_May_2022.jpg/1280px-BTS_at_the_White_House_press_briefing%2C_31_May_2022.jpg" 
+                                 class="member-photo bts-ot7" 
+                                 alt="BTS OT7 Group"
+                                 onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80';">
+                            <div class="photo-badge">💜 BTS OT7 (Forever With You)</div>
+                        </div>
+                        <div class="member-info">
+                            <div class="member-korean">방탄소년단 • BTS OT7</div>
+                            <h3 class="member-name">Bangtan Sonyeondan</h3>
+                            <div class="wish-speech-bubble highlight-ot7">
+                                <p class="wish-message">
+                                    "2, 3, BANGTAN! Hello Devhuti! Together as 7, we send you our warmest love, highest energy, and an ocean of purple blessings! You make our purple galaxy shine brighter. Happy Birthday Devhuti! BORAHAE! 💜✨"
+                                </p>
+                            </div>
+                            <div class="signature-line">
+                                <span class="signature-prefix">We Are Bulletproof Together,</span>
+                                <div class="signature-box ot7-signature">
+                                    <span class="signature-title">Happy Birthday Devhuti</span>
+                                    <span class="signature-author">— from Bangtan Sonyeondan (BTS) 💜✨</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INTERACTIVE BIRTHDAY CAKE & CANDLE BLOWING SECTION -->
+    <section class="cake-celebration-section">
+        <div class="cake-content-box">
+            <span class="sub-badge">Make a Wish! 🎂✨</span>
+            <h2 class="section-title">Blow Out The Candles, Devhuti!</h2>
+            <p class="section-desc">Tap or click the cake below to make a wish and blow out the BTS candles!</p>
+
+            <!-- 3D CSS Birthday Cake -->
+            <div class="cake-stage" id="cake-stage">
+                <div class="cake" id="interactive-cake">
+                    <!-- Candles -->
+                    <div class="candles-wrapper">
+                        <div class="candle c1">
+                            <div class="flame" id="flame-1"></div>
+                        </div>
+                        <div class="candle c2">
+                            <div class="flame" id="flame-2"></div>
+                        </div>
+                        <div class="candle c3">
+                            <div class="flame" id="flame-3"></div>
+                        </div>
+                        <div class="candle c4">
+                            <div class="flame" id="flame-4"></div>
+                        </div>
+                    </div>
+                    <!-- Cake Tiers -->
+                    <div class="cake-tier tier-top">
+                        <div class="frosting"></div>
+                        <div class="berries">🍓 🫐 🍇 🌸</div>
+                    </div>
+                    <div class="cake-tier tier-bottom">
+                        <div class="frosting-drips"></div>
+                        <div class="cake-banner">💜 DEVHUTI 💜</div>
+                    </div>
+                    <div class="cake-plate"></div>
+                </div>
+            </div>
+
+            <!-- Interactive Cake Action Button & Surprise Note -->
+            <div class="cake-action-container">
+                <button class="glow-button blow-btn" id="blow-candles-btn">
+                    🎂 Click to Blow Out Candles & Celebrate! 🎉
+                </button>
+                <div id="wish-revealed" class="wish-revealed-msg hidden">
+                    <h3>✨ Your Birthday Wish Is Sent To The BTS Galaxy! ✨</h3>
+                    <p>May all your dreams turn into gold, Devhuti! 💜 Borahae Forever! 💜</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BTS 7 MEMBERS POLAROID SHOWCASE -->
+    <section class="polaroid-gallery-section">
+        <h2 class="gallery-title">The 7 Stars in Devhuti's Galaxy</h2>
+        <p class="gallery-subtitle">Hover & tap each card to feel the BTS Borahae vibe 💜</p>
+        <div class="polaroid-grid">
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #a855f7, #6366f1);">🐨</div>
+                <div class="polaroid-caption">
+                    <strong>Kim Namjoon (RM)</strong>
+                    <span>"Love Yourself"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">🐹</div>
+                <div class="polaroid-caption">
+                    <strong>Kim Seokjin (Jin)</strong>
+                    <span>"Epiphany & Worldwide Handsome"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #3b82f6, #1e1b4b);">🐱</div>
+                <div class="polaroid-caption">
+                    <strong>Min Yoongi (Suga)</strong>
+                    <span>"Life Goes On & Agust D"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #f59e0b, #ec4899);">🐿️</div>
+                <div class="polaroid-caption">
+                    <strong>Jung Hoseok (J-Hope)</strong>
+                    <span>"Hope World & Sunshine"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #f43f5e, #c084fc);">🐥</div>
+                <div class="polaroid-caption">
+                    <strong>Park Jimin (Jimin)</strong>
+                    <span>"Filter & Angelic Heart"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6);">🐻</div>
+                <div class="polaroid-caption">
+                    <strong>Kim Taehyung (V)</strong>
+                    <span>"Winter Bear & Borahae Creator"</span>
+                </div>
+            </div>
+            <div class="polaroid-card">
+                <div class="polaroid-avatar" style="background: linear-gradient(135deg, #6366f1, #d946ef);">🐰</div>
+                <div class="polaroid-caption">
+                    <strong>Jeon Jungkook (Jungkook)</strong>
+                    <span>"Euphoria & Golden Maknae"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH BORAHAE LOVE -->
+    <footer class="bts-footer">
+        <div class="footer-heart">💜</div>
+        <h3>Borahae Devhuti • I Purple You</h3>
+        <p>Crafted specially for Devhuti's Birthday | Seven with You Always 💜</p>
+        <div class="footer-tags">
+            <span>#HappyBirthdayDevhuti</span>
+            <span>#BTS_ARMY</span>
+            <span>#Borahae</span>
+            <span>#BTS_OT7</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Heart Popper Sound & Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
